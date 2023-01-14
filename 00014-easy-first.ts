@@ -24,6 +24,9 @@
 
 type First<T extends any[]> = T extends [first: infer F, ...L: any] ? F : never
 
+// Simpler solution
+// type First<T extends any[]> = T extends [] ? never : T[0]
+
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
